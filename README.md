@@ -1,17 +1,17 @@
-# 🤖 LEVREY - OpenRouter Chatbot (Streamlit + LLaMA 3)
+# 🤖 LEVREY - OpenRouter Chatbot (Streamlit + GPT-3.5)
 
-**Levrey** is a sleek and minimal chatbot powered by [OpenRouter.ai](https://openrouter.ai), built with **Python** and **Streamlit**, using Meta’s **LLaMA 3** model.  
-Perfect for learning, prototyping, or showing off in your portfolio — and it runs completely free.
+**Levrey** is a modern chatbot UI powered by [OpenRouter.ai](https://openrouter.ai), built with **Python** and **Streamlit**, using **OpenAI's GPT-3.5 Turbo** model.  
+Simple, free, and perfect for portfolio projects, learning, or demos.
 
 ---
 
 ## ✨ Features
 
-- 🔮 Powered by `meta-llama/llama-3-8b-instruct` via OpenRouter
-- 🧠 Fast, intelligent responses — no OpenAI key required
-- 🧑‍💻 Built with Streamlit’s modern chat UI
-- 🎨 Easily customizable (avatars, system prompt, models, etc.)
-- 💸 100% free to use and deploy on [Streamlit Cloud](https://streamlit.io/cloud)
+- 💬 Powered by `openai/gpt-3.5-turbo` via OpenRouter
+- 🧠 Fast, intelligent responses — no OpenAI account needed
+- ⚡ Streamlit-based chat interface
+- 💸 100% free to run (with OpenRouter API key)
+- 🔧 Easy to customize: change models, UI, prompts
 
 ---
 
@@ -20,7 +20,7 @@ Perfect for learning, prototyping, or showing off in your portfolio — and it r
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/levrey-chatbot.git
+git clone https://github.com/radiva/levrey-chatbot.git
 cd levrey-chatbot
 ```
 
