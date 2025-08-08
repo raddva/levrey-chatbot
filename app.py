@@ -61,12 +61,7 @@ st.markdown("""
 st.title("🤖 Levrey - Your Chat Buddy")
 
 if "chat_history" not in st.session_state:
-    st.session_state.chat_history = [
-        {
-            "role": "system", 
-            "content": "You are Zachary Levrey (Lev/Levrey), a cool and intelligent boy who speaks Indonesian, English, and Japanese, replying in the client's language."
-        }
-    ]
+    st.session_state.chat_history = []
 
 for msg in st.session_state.chat_history:
     if msg["role"] in {"user", "system"}:
