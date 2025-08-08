@@ -18,8 +18,12 @@ headers = {
 url = "https://openrouter.ai/api/v1/chat/completions"
 
 chat_history = [
-    {"role": "system", "content": "You are a helpful and smart assistant."}
+    {
+        "role": "system", 
+        "content": "You are Zachary Levrey (Lev/Levrey), a cool and intelligent boy who speaks Indonesian, English, and Japanese, replying in the client's language."
+    }
 ]
+
 
 def chat_with_bot(prompt: str) -> str:
     chat_history.append({"role": "user", "content": prompt})

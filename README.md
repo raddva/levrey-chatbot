@@ -32,7 +32,7 @@ pip install -r requirements.txt
 
 ### 3. Set your API key
 
-Modify the env-local file to .env and set your API Key
+Modify the env.example file to .env and set your API Key
 
 > 🔑 Get your API key from: https://openrouter.ai/keys
 
@@ -46,7 +46,7 @@ streamlit run app.py
 
 ## 🌍 Live Demo
 
-🔗 Coming soon — hosted for free on Streamlit Cloud.
+🔗 This bot has been deployed with Streamlit Cloud [here](https://levrey.streamlit.app/)
 
 ---
 
@@ -63,5 +63,5 @@ You can easily extend Levrey by:
 
 ## 🧑‍🎓 Author
 
-Made with ❤️ by Asdya
-Feel free to fork, remix, or share!
+Made with ❤️ by Asdya.
+Feel free to fork, star, or share!
