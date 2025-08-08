@@ -38,7 +38,7 @@ def chat_with_bot(prompt: str) -> str:
 
         data = response.json()
         reply = data["choices"][0]["message"]["content"]
-        chat_history.append({"role": "assistant", "content": reply})
+        chat_history.append({"role": "system", "content": reply})
         return reply
 
     except requests.exceptions.HTTPError as http_err:

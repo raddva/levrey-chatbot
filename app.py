@@ -16,7 +16,7 @@ st.markdown("""
     font-size: 16px;
     line-height: 1.4;
 }
-.assistant {
+.system {
     background-color: #f1f1f1;
     color: #000;
     align-self: flex-start;
@@ -62,18 +62,21 @@ st.title("🤖 Levrey - Your Chat Buddy")
 
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = [
-        {"role": "system", "content": "A helpful and intelligent assistant."}
+        {
+            "role": "system", 
+            "content": "You are Zachary Levrey (Lev/Levrey), a cool and intelligent boy who speaks Indonesian, English, and Japanese, replying in the client's language."
+        }
     ]
 
 for msg in st.session_state.chat_history:
-    if msg["role"] in {"user", "assistant"}:
-        alignment = "user" if msg["role"] == "user" else "assistant"
+    if msg["role"] in {"user", "system"}:
+        alignment = "user" if msg["role"] == "user" else "system"
         st.markdown(
             f'<div class="chat-container"><div class="chat-bubble {alignment}">{msg["content"]}</div></div>',
             unsafe_allow_html=True
         )
 
-st.markdown('<div class="info-label">💡 Your conversation is not saved. Refreshing will remove it.</div>', unsafe_allow_html=True)
+st.markdown('<div class="info-label">💡 Your conversation was never saved. Refreshing will remove it.</div>', unsafe_allow_html=True)
 user_prompt = st.chat_input("Write anything...")
 
 if user_prompt:
@@ -88,7 +91,7 @@ if user_prompt:
         response = chat_with_bot(user_prompt)
 
     st.markdown(
-        f'<div class="chat-container"><div class="chat-bubble assistant">{response}</div></div>',
+        f'<div class="chat-container"><div class="chat-bubble system">{response}</div></div>',
         unsafe_allow_html=True
     )
-    st.session_state.chat_history.append({"role": "assistant", "content": response})
+    st.session_state.chat_history.append({"role": "system", "content": response})
